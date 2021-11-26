@@ -1,0 +1,358 @@
+body{
+  margin:0;
+  padding:0;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background: black;
+}
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100px;
+  padding: 10px 100px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  z-index: 2;
+}
+nav.black{
+  background: #42a6c2;
+  height:60px;
+  padding:inherit;
+  padding-left:25px;
+  padding-right:25px;
+  line-height: .5em;
+}
+nav .logo{
+  float: left;
+}
+nav .logo h2{
+  transition: .5s;
+  font-family: 'Merriweather', serif;
+  padding-top: 5px;
+  color: #42a6c2;
+}
+nav.black .logo h2{
+  color:black;
+  padding-left: 3px;
+}
+nav ul{
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li{
+  list-style-type: none;
+  text-decoration: none;
+  transition: .5s;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #42a6c2;
+  font-family: 'Source Sans Pro', sans-serif;
+  transition: .5s;
+  line-height: 80px;
+  padding: 2px 20px;
+}
+nav.black ul li a{
+  color:black;
+  line-height: 3.5em;
+}
+nav ul li a.active, nav ul li a:hover{
+  color:#fff;
+  background: #42a6c2;
+  border-radius: 15px;
+}
+nav.black ul li a.active, nav ul li a:hover{
+  color:#42a6c2;
+  background: black;
+  border-radius: 15px;
+}
+#hero{
+  width: 100%;
+  height: 100vh;
+  background: url(/home/sheethal/Downloads/heroimg.png);
+  background-size: cover;
+}
+.main{
+  padding: 5%;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.container {
+  min-width: 992px !important;
+}
+/*column*/
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-xl-auto {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+}
+
+
+.container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+}
+
+.card{
+  display:grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 50px 50px 70px;
+  grid-template-areas: "icon" "title" "stat";
+  border-radius: 25px;
+  background: #1d1d1d;
+  box-shadow: 5px 5px 15px black;
+  text-align: center;
+  color: white;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+  height: 300px;
+}
+.card-icon {
+  grid-area: icon;
+}
+.card-text {
+  grid-area: text;
+}
+.card-stat {
+  grid-area: stat;
+}
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+.card-text h2 {
+  margin-top:0px;
+  font-size:28px;
+}
+.card-stat {
+  grid-area: stat;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+  display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+color: white;
+padding:10px;
+}
+.card:hover {
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.card-slide{
+  position: relative;
+  background: #fff;
+  height: 430px;
+  margin: 50px auto;
+}
+.card-slide .content{
+  width: auto;padding: 30px;
+  box-sizing: border-box;
+  color: black;
+}
+.card-slide .slide-text{
+  position: relative;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.card-slide .slide-text h3{
+  color: #fff;
+  font-size: 1.5em;
+}
+.card-slide .content a{
+  display: inline-block;
+  margin: 20px 50px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 2px solid #262626;
+  color: #262626;
+  font-weight: 600;
+  background-color: aqua;
+}
+.swiper{
+  height: 500px;
+}
+
+footer{
+	line-height: 1.5;
+	margin:0;
+	padding:0;
+
+	box-sizing: border-box;
+}
+footer.container{
+	max-width: 1170px;
+	margin:auto;
+}
+footer.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+footer ul{
+	list-style: none;
+}
+footer.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+footer .col{
+   width: 25%;
+   padding: 0 15px;
+}
+footer .col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+footer .col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #42a6c2;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+footer .col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+footer .col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+footer .col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+footer .col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+footer .col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  footer.col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  footer.col{
+    width: 100%;
+}
+}
+.rgb::after {
+  content:"";
+  background: linear-gradient(45deg,
+  #ff0000 0%,
+  #ff9a00 10%,
+  #d0de21 20%,
+  #4fdc4a 30%,
+  #3fdad8 40%,
+  #2fc9e2 50%,
+  #1c7fee 60%,
+  #5f15f2 70%,
+  #ba0cf8 80%,
+  #fb07d9 90%,
+  #ff0000 100%  )
+  repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: -3px;
+  border-radius: 16px;
+filter: blur(8px);
+z-index: -1;
+animation: rgb 6s linear infinite;
+}
+@keyframes rgb {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
